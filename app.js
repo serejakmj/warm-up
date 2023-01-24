@@ -29,7 +29,7 @@ const generateColor = () => {
 }
 
 const setRandomColor = (cols, isInitial) => {
-  const colors = isInitial ? getColorsFromHash : [];
+  const colors = isInitial ? getColorsFromHash() : [];
   isInitial = isInitial && colors.length > 0
   cols.forEach((col, index) => {
     const isPinned = col.querySelector('i').dataset.type === 'pinned';
@@ -42,8 +42,7 @@ const setRandomColor = (cols, isInitial) => {
     const color = isInitial ? colors[index] : generateColor();
     
     col.style.backgroundColor = color;
-    console.log(isInitial)
-    if(isInitial){
+    if(!isInitial){
       colors.push(color);
     }
     text.textContent = color;
