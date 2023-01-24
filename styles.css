@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  }
+
+.col{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*1) Сделать чтобы кнопка и текст были темными или светлыми в зависимости от фона*/
+.col h2{
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  transition: background 3s;
+}
+
+.col h2:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.col button{
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.col button i{
+  color: rgba(255, 255, 255, 0.3)
+}
